@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
     <body>
-		<script src=”SCLFilePicker.updated.js” data-domain=”er.staging.socialcast.com”></script>
+        <input type="button" id="click_me" value="click me">
         <script type="text/javascript">
-            SCLFilePicker.init({
-                               domain: "er.staging.socialcast.com"
-                               });
-            SCLFilePicker.open({
-                               multiple: true
-                               });
+            function onLoad() {
+                var button = document.getElementById("click_me");
+                button.addEventListener("click", function() {
+                                        var fileRedirect = 'scl-file-selected://?filename="fileName.ext"&fileSize=1024&icon="happyface.jpg"';
+                                        alert(fileRedirect);
+                                        window.location = fileRedirect;
+                                        });
+            }
+            
+            window.onLoad = onLoad();
         </script>
-        <div>Hello World</div>
+        Hello World!
     </body>
 </html>

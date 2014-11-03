@@ -46,9 +46,18 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
 
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        println(request.URL)
+        if (isSelectedFile(request.URL)) {
+            var query: String = request.URL.query!
+            println(query)
+            return false
+        }
         // conditionally switch based on request.URL
         return true
+    }
+    
+    func isSelectedFile(url: NSURL) -> Bool {
+        var sclScheme = "scl-file-selected"
+        return url.scheme!.hasPrefix(sclScheme)
     }
     
 }
