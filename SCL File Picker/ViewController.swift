@@ -31,7 +31,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
     func loadBrowserView() {
         
-        webView = UIWebView(frame: self.view.frame)
+        webView = UIWebView(frame: self.view.bounds)
         webView.delegate = self
         
         let fileString = NSBundle.mainBundle().pathForResource("index", ofType: "html")

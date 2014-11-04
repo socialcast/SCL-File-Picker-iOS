@@ -13,7 +13,6 @@
 		257D10291A001B3C00BCB6C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257D10281A001B3C00BCB6C8 /* Images.xcassets */; };
 		257D102C1A001B3C00BCB6C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257D102A1A001B3C00BCB6C8 /* LaunchScreen.xib */; };
 		257D10381A001B3D00BCB6C8 /* SCL_File_PickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257D10371A001B3D00BCB6C8 /* SCL_File_PickerTests.swift */; };
-		25E0F2AE1A0026CE00FCB33E /* SCLFilePicker.updated.js in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F2AD1A0026CE00FCB33E /* SCLFilePicker.updated.js */; };
 		25E0F2B21A0029C200FCB33E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F2B11A0029C200FCB33E /* index.html */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		257D10311A001B3D00BCB6C8 /* SCL File PickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SCL File PickerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		257D10361A001B3D00BCB6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		257D10371A001B3D00BCB6C8 /* SCL_File_PickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCL_File_PickerTests.swift; sourceTree = "<group>"; };
-		25E0F2AD1A0026CE00FCB33E /* SCLFilePicker.updated.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SCLFilePicker.updated.js; sourceTree = "<group>"; };
 		25E0F2B11A0029C200FCB33E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				25E0F2B11A0029C200FCB33E /* index.html */,
-				25E0F2AD1A0026CE00FCB33E /* SCLFilePicker.updated.js */,
 				257D10211A001B3C00BCB6C8 /* AppDelegate.swift */,
 				257D10231A001B3C00BCB6C8 /* ViewController.swift */,
 				257D10251A001B3C00BCB6C8 /* Main.storyboard */,
@@ -198,7 +195,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25E0F2AE1A0026CE00FCB33E /* SCLFilePicker.updated.js in Resources */,
 				25E0F2B21A0029C200FCB33E /* index.html in Resources */,
 				257D10271A001B3C00BCB6C8 /* Main.storyboard in Resources */,
 				257D102C1A001B3C00BCB6C8 /* LaunchScreen.xib in Resources */,
