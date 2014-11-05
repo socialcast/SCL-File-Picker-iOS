@@ -2,18 +2,20 @@
 <html>
     <body>
         <input type="button" id="click_me" value="click me">
-        <script type="text/javascript">
-            function onLoad() {
-                var button = document.getElementById("click_me");
-                button.addEventListener("click", function() {
-                                        var fileRedirect = 'scl-file-selected://?filename="fileName.ext"&fileSize=1024&icon="happyface.jpg"';
-                                        alert(fileRedirect);
-                                        window.location = fileRedirect;
-                                        });
-            }
+            <script type="text/javascript">
+                function onLoad() {
+                    var button = document.getElementById("click_me");
+                    button.addEventListener("click", function() {
+                                            var fileRedirect = 'scl-file-selected://?filename=fileName.ext&fileSize=1024&icon=happyface.jpg&fileUrl=';
+                                            fileRedirect += encodeURI('https://domain.com/path/file.ext');
+                                            
+                                            alert(fileRedirect);
+                                            window.location = fileRedirect;
+                                            });
+                }
             
             window.onLoad = onLoad();
-        </script>
-        Hello World!
+                </script>
+            Hello World!
     </body>
 </html>
