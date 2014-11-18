@@ -33,9 +33,8 @@ class ViewController: UIViewController, UIWebViewDelegate {
         
         webView = UIWebView(frame: self.view.bounds)
         webView.delegate = self
-        
-        let fileString = NSBundle.mainBundle().pathForResource("index", ofType: "html")
-        let url: NSURL = NSURL(fileURLWithPath: fileString!)!
+
+        let url: NSURL = NSURL(string: "https://dev5.airwatchdev.com/MyDevice/ContentPicker?&apiKey=dummy_key&linkType=preview&multiple=false&redirectScheme=scl-file-selected")!
         let request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         
         webView.loadRequest(request)
@@ -48,7 +47,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         if (isSelectedFile(request.URL)) {
             var query: String = request.URL.query!
-            println(query)
+            println(query) // the entire query value will be a URL-encoded JSON object
             return false
         }
         // conditionally switch based on request.URL
