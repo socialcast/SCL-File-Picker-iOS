@@ -34,8 +34,9 @@ class ViewController: UIViewController, UIWebViewDelegate {
         webView = UIWebView(frame: self.view.bounds)
         webView.delegate = self
         
-        let fileString = NSBundle.mainBundle().pathForResource("index", ofType: "html")
-        let url: NSURL = NSURL(fileURLWithPath: fileString!)!
+//        let fileString = NSBundle.mainBundle().pathForResource("index", ofType: "html")
+//        let url: NSURL = NSURL(fileURLWithPath: fileString!)!
+        let url: NSURL = NSURL(string: "https://dev5.airwatchdev.com/MyDevice/ContentPicker")!
         let request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         
         webView.loadRequest(request)
@@ -46,6 +47,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
 
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        NSLog("webView request URL: %@", request.URL);
         if (isSelectedFile(request.URL)) {
             var query: String = request.URL.query!
             println(query)
